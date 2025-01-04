@@ -1,0 +1,51 @@
+/*  A CSS selector is the first part of a CSS Rule. It is a pattern of elements and other terms that tell the browser which HTML elements should be selected to have the CSS property values inside the rule applied to them. 
+
+See https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors
+
+The different CSS selectors are: 
+
+1)  type (= tag name or element) selectors
+
+    use a comma to select multiple types: h1, h2 { ... }
+
+    not using a comma and combining types means one inside the other: h1 h2 { ... }
+
+2)  class selectors - starts with a ., more specific than types
+3)  ID selectors - starts with #, are more specific than classes. 
+    Should exist only once inside an HTML document. 
+4)  Universal selector (*) - selects everything 
+  
+    The important flag (!) overrides all properties, for example: 
+
+    p { color: purple!important; }
+
+    Calculate the specificity score of CSS selectors here: https://specificity.keegan.st/ 
+
+    What does cascade in CSS mean?
+
+    The cascade is an algorithm that defines how user agents combine property values originating from different sources. The cascade defines the origin and layer that takes precedence when declarations in more than one origin, cascade layer, or @scope block set a value for a property on an element.
+
+    see: https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade 
+
+    What is inheritance in CSS?
+
+    In CSS, inheritance controls what happens when no value is specified for a property on an element.
+
+    see: https://developer.mozilla.org/en-US/docs/Web/CSS/Inheritance 
+*/ 
+
+body {
+  font-size: 22px;
+}
+
+h1, h2 {
+  color: blue;
+}
+
+div {
+  color: purple;
+}
+
+div span {
+  text-transform: uppercase;
+}
