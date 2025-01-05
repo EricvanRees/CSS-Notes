@@ -1,0 +1,68 @@
+/* see https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units for a table with Absolute length units 
+
+The only relevant absolute length unit here is pixels
+
+default browser size of text is 16 pixels.
+
+Using an absolute font size as pixel setting in a CSS file overrides browser settings for pixel size
+
+*** 
+
+See the "numbers, lenghts, and percentages" chart::after
+
+A <percentage> represents a fraction of some other value. 
+Percentage is not used for a font size, but for width, meaning a percentage of its parent's element width.
+
+If you want a block-level element to take up 100% percent of the page, you don't need to set a width percentage as 100% is the default value. 
+
+****
+
+Relative length units are relative to something else. 
+
+* em is relative to the font size of this element, or the font size of the parent element when used for font-size. 
+* rem is relative to the font size of the root element.
+
+rem is often used for font-size: 1rem is the default (16 pixels) so won't change anything.
+rem is relative the font size of the root (the browser, or html element in the css).
+
+Using em for font-size may have unintended consequences as it may relate to another font-size definition using rem.
+
+*** When to use em? - use for margin or padding
+
+*** vh and vw are relative to the viewport's height and width, respectively. Percentages do the same thing as vh and vw.
+
+However: using a width of 100% is better as a width of 100vw as this last option adds a horizontal scroll bar you might not want. 
+
+*** min-height: https://developer.mozilla.org/en-US/docs/Web/CSS/min-height
+
+The min-height CSS property sets the minimum height of an element. It prevents the used value of the height property from becoming smaller than the value specified for min-height. 
+
+The element's height is set to the value of min-height whenever min-height is larger than max-height or height.
+
+setting a body min-height to 100vh allows the body to grow with the content. 
+
+*/
+
+/* CSS reset example, used to delete default browser padding and margin for extra space: */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 50%;
+}
+
+h1 {
+  border: 2px dashed red;
+  width: 50%;
+  font-size: 3rem;
+  padding: 0.5em; /* this means "a padding of half of 3rem = 1.5rem ( = 24px)"*/
+}
+
+p {
+  font-size: 2rem;
+  width: 40ch;
+}
