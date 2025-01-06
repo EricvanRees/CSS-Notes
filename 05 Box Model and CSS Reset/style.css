@@ -1,0 +1,92 @@
+/* MDN Web Docs on box model: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model
+
+W3Schools on box model: https://www.w3schools.com/css/css_boxmodel.asp 
+
+In CSS, the term "box model" is used when talking about design and layout.
+
+The CSS box model is essentially a box that wraps around every HTML element. It consists of: content, padding, borders and margins.
+
+Explanation of the different parts:
+
+*Content - The content of the box, where text and images appear
+*Padding - Clears an area around the content. The padding is transparent
+*Border - A border that goes around the padding and content
+*Margin - Clears an area outside the border. The margin is transparent
+
+The box model allows us to add a border around elements, and to define space between elements. 
+
+***CSS Reset
+
+see: http://web.simmons.edu/~grovesd/comm244/notes/week4/css-reset#:~:text=We%20reset%20the%20browser%20styles,the%20basic%20styles%20are%20different. 
+
+A CSS Reset style sheet is a list of rules that 'reset' all of the default browser styles.
+
+We reset the browser styles for two primary reasons:
+
+Not all browsers apply the same default rules. They may be similar, but not exact. It can be difficult to provide the same designs in each browser if the basic styles are different.
+
+Once you start designing and coding all of the fine details of your site, you may discover that a lot of what you are doing is simply overriding default browser styles. The reset does this quickly so that you don't have to.
+
+*/ 
+
+/* in this example, the font-size of 3rem (3x16px) defines the user agent stylesheet settings for margin (.67em = 32px) */
+
+* {
+  margin: 0;
+  padding: 0;
+  /* The box-sizing property allows us to include the padding and border in an element's total width and height. It does not include the margin values, which are outside the elements.
+  
+  If you set box-sizing: border-box; on an element, padding and border are included in the width and height. see https://www.w3schools.com/css/css3_box-sizing. */
+  box-sizing: border-box;
+}
+
+/* h1 {
+  border: 2px dashed red;
+  width: 400px;
+  font-size: 3rem;
+  padding: 0.5em;
+} */
+
+.container {
+  border: 2px dashed red;
+  font-size: 1.5rem;
+  margin: 1.5em; /* shorthand for "top right bottom left" these same shorthand applies for padding an border */
+
+  /* margin: 1.5em 2em 2em; - shorthand for 1.5em on the top, 2em left + right, 2em on the bottom */
+
+  /* margin-top: 1.5rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem; */
+  padding: 1.5rem 2em 3em 4em;
+
+}
+
+/* different border properties and values in the MDN Developer docs: 
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_backgrounds_and_borders 
+
+CSS Outline: An outline is a line drawn outside the element's border.
+
+https://www.w3schools.com/css/css_outline.asp
+
+The outline-offset property adds space between an outline and the edge/border of an element. The space between an element and its outline is transparent.
+
+An outline offset can have negative values: 
+
+A negative value places the outline inside the element. A value of 0 places the outline so that there is no space between it and the element.
+
+*/
+
+.circle {
+  background-color: chocolate;
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  outline-offset: .25rem; 
+  outline: 2px solid red;
+  border-radius: 50%;
+  /* this is 3rem for top + bottom, auto for left and right to center it: */
+  margin: 3rem auto;
+}
+
