@@ -1,0 +1,98 @@
+/* 
+
+Typography is the way that text is arranged and presented
+
+*/
+
+body {
+  padding: 10%;
+  font-size: 2rem;
+}
+
+/* these do not automatically inherit font, so it needs to be set manually */
+/* input, button {
+  font: inherit;
+} */
+
+/* The text-decoration shorthand CSS property sets the appearance of decorative lines on text. It is a shorthand for text-decoration-line, text-decoration-color, text-decoration-style, and the newer text-decoration-thickness property.
+
+see https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration
+
+The text-transform CSS property specifies how to capitalize an element's text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized. It also can help improve legibility for ruby.
+
+see: https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform 
+
+The text-align CSS property sets the horizontal alignment of the inline-level content inside a block element or table-cell box. This means it works like vertical-align but in the horizontal direction.
+
+see: https://developer.mozilla.org/en-US/docs/Web/CSS/text-align
+
+The text-indent CSS property sets the length of empty space (indentation) that is put before lines of text in a block.
+
+see: https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent 
+
+The line-height CSS property sets the height of a line box in horizontal writing modes.
+
+see: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height 
+
+The letter-spacing CSS property sets the horizontal spacing behavior between text characters.
+
+see: https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing 
+
+The word-spacing CSS property sets the length of space between words and between tags.
+
+see: https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing
+
+The font-weight CSS property sets the weight (or boldness) of the font. The weights available depend on the font-family that is currently set.
+
+see: https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight
+
+The font-style CSS property sets whether a font should be styled with a normal, italic, or oblique face from its font-family.
+
+see: https://developer.mozilla.org/en-US/docs/Web/CSS/font-style 
+
+The font-family CSS property specifies a prioritized list of one or more font family names and/or generic family names for the selected element.
+
+The web normally uses sans-serif fonts.
+
+You should always include at least one generic family name in a font-family list, since there's no guarantee that any given font is available. This lets the browser select an acceptable fallback font when necessary.
+
+see: https://developer.mozilla.org/en-US/docs/Web/CSS/font-family 
+
+The following fonts are the best web safe fonts for HTML and CSS:
+
+Arial (sans-serif)
+Verdana (sans-serif)
+Tahoma (sans-serif)
+Trebuchet MS (sans-serif)
+Times New Roman (serif)
+Georgia (serif)
+Garamond (serif)
+Courier New (monospace)
+Brush Script MT (cursive)
+
+see: https://www.w3schools.com/cssref/css_websafe_fonts.php
+
+Google Fonts: https://fonts.google.com/about 
+
+How To Use Google Fonts:
+Just add a special style sheet link in the <head> section (or use an import statement starting with @import at the top of the CSS file) and then refer to the font in the CSS, for example: 
+
+body {
+  font-family: 'Roboto, sans-serif;
+}
+
+see: https://www.w3schools.com/css/css_font_google.asp
+
+*/
+
+p {
+  text-decoration: none;
+  text-transform: capitalize;
+  text-align: center;
+  /* default for line-height is 1.2*/
+  line-height: 1.5;
+  /* letter-spacing: 0.25em 
+     word-spacing: 0.5em;
+  */
+  font-weight: normal; 
+}
