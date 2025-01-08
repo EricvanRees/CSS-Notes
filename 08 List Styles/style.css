@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  padding: 5% 10%;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+/* for different list styles, see this link: https://www.w3schools.com/css/css_list.asp
+
+*/
+
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul {
+  list-style-type: lower-alpha;
+  text-align: center;
+  /* the following is aligning bullet points when centerint the list text. For some browsers, the default is outside: */
+  list-style-position: inside;
+  color: #00f;
+  line-height: 1.6;
+  /* set an image as list style 
+  list-style-image: url(...);
+  here, the square is the fallback option in case the image doesn't load:
+  list-style: square url(...) inside */ 
+}
+
+/* pseudo class, also takes in (odd) or (even): */
+ul li:nth-child(2) {
+  color: red;
+}
+
+/* pseudo element: */
+::marker {
+  color: black;
+  font-family: fantasy;
+  font-size: 1em;
+  content: "Only $5 >> ";
+}
