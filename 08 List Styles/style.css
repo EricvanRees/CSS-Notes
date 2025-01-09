@@ -18,7 +18,7 @@ ol {
 ul {
   list-style-type: lower-alpha;
   text-align: center;
-  /* the following is aligning bullet points when centerint the list text. For some browsers, the default is outside: */
+  /* the following is aligning bullet points when centering the list text. For some browsers, the default is outside: */
   list-style-position: inside;
   color: #00f;
   line-height: 1.6;
