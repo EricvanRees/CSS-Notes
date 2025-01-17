@@ -57,5 +57,13 @@ see: https://developer.mozilla.org/en-US/docs/Web/CSS/display
 */
 
 .clear {
+  clear: both;
+}
 
+.container {
+  background-color: yellow;
+  border: 1px solid black;
+  padding: 1rem;
+  /* this ensures the floated element is contained within the container: */ 
+  display: flow-root;
 }
