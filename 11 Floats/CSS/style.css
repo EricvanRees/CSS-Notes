@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  font-family: 1.5rem;
+  font-family: "Roboto", sans-serif;
+}
+
+/* this creates a black square above the paragraphs*/
+.block {
+  width: 30vw;
+  height: 30vw;
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+}
+
+.left {
+  float: left;
+  /* this will apply margin to the text right from the black box: */
+  margin-right: 1rem;
+}
+
+.right {
+  float: right;
+  /* this will apply margin to the text right from the black box: */
+  margin-left: 1rem;
+}
+
+/* What is a floated element? - It is an element that enables elements below it to wrap around them. It is also used to float elements left and right on a page. You can use it also inside a container, but remember to use "display: flow-root" so the container contains the floated element and doesn't shrink based on the text content alone.
+
+The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow (in contrast to absolute positioning).
+
+See: https://developer.mozilla.org/en-US/docs/Web/CSS/float 
+
+What is the "clear" property? 
+
+The clear CSS property sets whether an element must be moved below (cleared) floating elements that precede it. The clear property applies to floating and non-floating elements.
+
+see: https://developer.mozilla.org/en-US/docs/Web/CSS/clear 
+
+"overflow: auto" - helps to extend a container element all the way down the height of a floated element inside it. However, it is problematic with little content, so the better option is "display: flow-root".
+
+What is the "overflow" property?
+
+The overflow CSS shorthand property sets the desired behavior when content does not fit in the element's padding box (overflows) in the horizontal and/or vertical direction.
+
+See: https://developer.mozilla.org/en-US/docs/Web/CSS/overflow 
+
+What is "display: flow-root"? It puts a box with the height of a floating element in a container so the content below it is cleared (and does not overlap with little content in the box above it).
+
+"display: flow-root" is preferred nowadays over "overflow: auto"
+
+The element generates a block box that establishes a new block formatting context, defining where the formatting root lies.
+
+see: https://developer.mozilla.org/en-US/docs/Web/CSS/display
+
+*/
+
+.clear {
+
+}
