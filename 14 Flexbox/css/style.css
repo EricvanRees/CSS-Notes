@@ -1,0 +1,92 @@
+/* For Flexbox basics, see https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox 
+
+Flexbox properties are set on the outside container so they apply for the items inside it 
+
+You can also set Flexbox properties on the individual items. This will make each item a Flex container. 
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  min-height: 400px;
+  margin-inline: auto;
+  border: 1px solid #000;
+  /* This causes the <section> element to become a flex container and its children become flex items. 
+  items are aligned horizontally (1 row with multiple columns). 
+  */
+  display: flex;
+  /* items will be aligned to the end of the box, with a whitespace at the beginning */
+  /* justify-content: flex-end; */
+  /* "justify-content: center" has trailing space left and right */
+  /* sets vertical gap between items:
+  gap: 1rem; */
+  /* less used is "justify-content: space-around" as the spaces on the edges are diferent than the ones in between. 
+  "justify-content: space-between" has no trailing space at the beginning and end, only between items.
+  "justify-content: space-evenly" has the same spaces between the items, and at the beginning and end */
+  /* "align-items: flex-start;" - this is the default aligns them at the top of the container, while "align-items: flex-end places them at the bottom of the container. "align-items: center" sets them at the middle of the container.*/
+  
+  /* the default of flex-direction is row*/
+  /* "flex-direction: column" stacks divs vertically, while "flex-direction: row-reverse" changes the order of the elements */
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: space-evenly;
+
+  /* "flex-wrap: wrap" prevents content from going outside of the container when downsizing the page */
+
+  /* "flex-flow: row wrap" combines flex-direction and flex-wrap */
+
+  /* align-content determines the spacing between lines, while align-items determines how the items as a whole are aligned within the container. When there is only one line, align-content has no effect.
+
+  align-content: flex-start / center / flex-end / space-between / space-around / space-evenly */
+  align-items: center;
+  flex-flow: row wrap;
+  align-content: space-evenly;
+} 
+
+.box {
+  /* min-width: 100px; */
+  /* min-height: 100px; */
+  height: 100px;
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+
+  /* set individual boxes as flex containers: */
+  display: flex;
+  /* aligns items horizontally: */
+  justify-content: center;
+  /* aligns items vertically */
+  align-items: center;
+  /* "flex-grow: 1" means if boxes need to grow, they grow the same amount */ 
+  flex-grow: 1;
+  /* "flex-basis" is similar to "min-width */
+  flex-basis: 100px;
+}
+
+.box:nth-child(2) {
+  /* sets growth proportion in relation to other box, in this case, the double */
+  flex-grow: 2;
+  /* flex-shrink works similar to flex-grow, but is used to prevent elements overflowing out of the containing box if individual flex boxes. Also, it starts working when you get below the specified flex-basis values."flex-shrink: 2" */
+
+  /* "flex" is shorthand for flex-grow and flex-shrink and flex-basis, for example "flex: 1 1 250px; */ 
+
+  /* order property changes the order of individual elements */ 
+  order: -1;
+}
+
