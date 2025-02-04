@@ -1,4 +1,4 @@
-# CSS For Beginners - Course Notes and Examples
+# CSS For Beginners - Course Notes with Added Links and Examples
 
 The following repository contains materials from the 11-hour online CSS Full Course for Beginners from Dave Gray. 
 
